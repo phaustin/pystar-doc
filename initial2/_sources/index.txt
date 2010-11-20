@@ -1,19 +1,16 @@
-=======================================================
-Welcome to the documentation for the Datarray prototype
-=======================================================
+====================
+Pystar documentation
+====================
 
-Hi Mom!
+Examples for CPSC python follow-on
 
-Datarray is a prototype implementation of a numpy ndarray subclass with named
-axes and optionally labeled ticks on said axes.
+Examples are hosted at
 
-The datarray code is being collaboratively developed and hosted at:
-
-http://github.com/fperez/datarray
+http://github.com/phaustin/pystar
 
 The documentation for various releases and a current build can be found here:
 
-http://fperez.github.com/datarray-doc
+http://phaustin.github.com/pystar-doc
 
 Contents:
 

@@ -1,2 +1,4 @@
 Lists
 =====
+
+.. automodule:: examples.indexing
