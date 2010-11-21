@@ -49,12 +49,48 @@
             
   <div class="section" id="data-types">
 <h1>Data types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="examples-from-examples-lists-demo-py">
-<h2>Examples from examples/lists_demo.py<a class="headerlink" href="#examples-from-examples-lists-demo-py" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-examples.lists_demo">
+<span id="examples-from-examples-lists-demo-py"></span><h2>Examples from examples/lists_demo.py<a class="headerlink" href="#module-examples.lists_demo" title="Permalink to this headline">¶</a></h2>
+<p>examples at
+<a class="reference external" href="http://effbot.org/zone/python-list.htm">http://effbot.org/zone/python-list.htm</a></p>
+<p>Here is a python list</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
 </div>
-<div class="section" id="id1">
-<h2>Examples from examples/lists_demo.py<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
-<span class="target" id="module-examples.numpy_demo"></span><p>Create a numpy array of 32 bit floats
+<p>indexing starts at zero
+and covers the open interval [first,last)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:]</span>
+<span class="go">[1, 2, 3, 4]</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:]</span>
+<span class="go">[1, 2, 3, 4]</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>index ranges are called &#8220;slices&#8221;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">[1, 2]</span>
+</pre></div>
+</div>
+<p>you can index relative to beginning or end</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">[3, 4]</span>
+</pre></div>
+</div>
+<p>and slices are objects</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">endslice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="n">endslice</span><span class="p">]</span>
+<span class="go">[3, 4]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="module-examples.numpy_demo">
+<span id="examples-from-examples-numpy-demo-py"></span><h2>Examples from examples/numpy_demo.py<a class="headerlink" href="#module-examples.numpy_demo" title="Permalink to this headline">¶</a></h2>
+<p>Create a numpy array of 32 bit floats
 and square it</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span><span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
@@ -99,8 +135,8 @@ inclusive?</p>
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Data types</a><ul>
-<li><a class="reference internal" href="#examples-from-examples-lists-demo-py">Examples from examples/lists_demo.py</a></li>
-<li><a class="reference internal" href="#id1">Examples from examples/lists_demo.py</a></li>
+<li><a class="reference internal" href="#module-examples.lists_demo">Examples from examples/lists_demo.py</a></li>
+<li><a class="reference internal" href="#module-examples.numpy_demo">Examples from examples/numpy_demo.py</a></li>
 </ul>
 </li>
 </ul>
