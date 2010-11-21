@@ -17,7 +17,7 @@ Examples from examples/numpy_demo.py
 ------------------------------------
 
 
-+ Here is the doctest for `lists_demo.py <https://github.com/phaustin/pystar/blob/master/examples/numpy_demo.py>`_
++ Here is the doctest for `numpy_demo.py <https://github.com/phaustin/pystar/blob/master/examples/numpy_demo.py>`_
 
 
   .. automodule:: examples.numpy_demo
