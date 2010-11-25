@@ -2,6 +2,14 @@ Data types
 ==========
 
 
+Tuples
+------
+
++ Here is the doctest for `lists_demo.py <https://github.com/phaustin/pystar/blob/master/examples/tuples_demo.py>`_
+
+  .. automodule:: examples.tuples_demo
+
+
 Lists
 -----
 
