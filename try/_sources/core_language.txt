@@ -23,4 +23,45 @@ http://effbot.org/zone/python-list.htm
   .. automodule:: examples.lists_demo
 
 
+Control flow
+++++++++++++
+
+ - if/then/else
+
+ - for and while
+
+ - with
+
+ - list comprehensions
+
+ - generators and co-routines
+
+
+Functions
++++++++++
+
+ - parameters
+
+ - docstrings
+
+ - positional and named arguments
+
+ - nested functions and scopes
+
+
+Classes and instances
++++++++++++++++++++++
+
+ - classes/methods/instances
+
+
+Exceptions
+++++++++++
+
+
+
+Modules
++++++++
+
+
 
