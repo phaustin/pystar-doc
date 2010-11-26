@@ -1,6 +1,7 @@
 Libraries and extension modules
 ===============================
 
+
 Numpy arrays
 ++++++++++++
 
@@ -21,3 +22,25 @@ Unit testing
 ++++++++++++
 
 
+
+
+System calls
+++++++++++++
+
+
+
+
+Plotting
+++++++++
+
+
+
+
+Databases
++++++++++
+
+
+
+
+XML/Web processing
+++++++++++++++++++
