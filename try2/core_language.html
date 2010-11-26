@@ -1,0 +1,263 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Core language &mdash; pystar docs v0.0.7 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="pystar docs v0.0.7 documentation" href="index.html" />
+    <link rel="next" title="Libraries and extension modules" href="libraries.html" />
+    <link rel="prev" title="Pystar documentation" href="index.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="libraries.html" title="Libraries and extension modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Pystar documentation"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">pystar docs v0.0.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="core-language">
+<h1>Core language<a class="headerlink" href="#core-language" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-types">
+<h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="tuples">
+<h3>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">Here is the doctest for <a class="reference external" href="https://github.com/phaustin/pystar/blob/master/examples/tuples_demo.py">tuples_demo.py</a></p>
+<span class="target" id="module-examples.tuples_demo"></span><p>Here is a python tuple</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>indexing starts at zero
+and covers the open interval [first,last)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:]</span>
+<span class="go">(1, 2, 3, 4)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:]</span>
+<span class="go">(1, 2, 3, 4)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>index ranges are called &#8220;slices&#8221;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">(1, 2)</span>
+</pre></div>
+</div>
+<p>you can index relative to beginning or end</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">(3, 4)</span>
+</pre></div>
+</div>
+<p>and slices are objects</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">endslice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="n">endslice</span><span class="p">]</span>
+<span class="go">(3, 4)</span>
+</pre></div>
+</div>
+<p>tuples are immutable</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">9</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;ipython console&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n-Identifier">&lt;module&gt;</span>
+<span class="nc">TypeError</span>: <span class="n-Identifier">&#39;tuple&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+<p>tuples can be used as dictionary keys</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span><span class="o">=</span><span class="s">&#39;first entry&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span>
+<span class="go">{(0, 1, 2): &#39;first entry&#39;}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="lists">
+<h3>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>more examples at
+<a class="reference external" href="http://effbot.org/zone/python-list.htm">http://effbot.org/zone/python-list.htm</a></p>
+<ul>
+<li><p class="first">Here is the doctest for <a class="reference external" href="https://github.com/phaustin/pystar/blob/master/examples/lists_demo.py">lists_demo.py</a></p>
+<span class="target" id="module-examples.lists_demo"></span><p>examples at
+<a class="reference external" href="http://effbot.org/zone/python-list.htm">http://effbot.org/zone/python-list.htm</a></p>
+<p>Here is a python list</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Lists are mutable:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[1, 2, 3, 4, 5]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="go">5</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[1, 2, 3, 4]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span>
+<span class="go">[4, 3, 2, 1]</span>
+</pre></div>
+</div>
+<p>Lists can&#8217;t be used as dictionary keys</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]]</span><span class="o">=</span><span class="s">&#39;first entry&#39;</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;ipython console&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n-Identifier">&lt;module&gt;</span>
+<span class="nc">TypeError</span>: <span class="n-Identifier">list objects are unhashable</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="control-flow">
+<h2>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<ul class="simple">
+<li>if/then/else</li>
+<li>for and while</li>
+<li>with</li>
+<li>list comprehensions</li>
+<li>generators and co-routines</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<ul class="simple">
+<li>parameters</li>
+<li>docstrings</li>
+<li>positional and named arguments</li>
+<li>nested functions and scopes</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="classes-and-instances">
+<h2>Classes and instances<a class="headerlink" href="#classes-and-instances" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<ul class="simple">
+<li>classes/methods/instances</li>
+</ul>
+</blockquote>
+</div>
+<div class="section" id="exceptions">
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="modules">
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Core language</a><ul>
+<li><a class="reference internal" href="#data-types">Data Types</a><ul>
+<li><a class="reference internal" href="#tuples">Tuples</a></li>
+<li><a class="reference internal" href="#lists">Lists</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#control-flow">Control flow</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
+<li><a class="reference internal" href="#classes-and-instances">Classes and instances</a></li>
+<li><a class="reference internal" href="#exceptions">Exceptions</a></li>
+<li><a class="reference internal" href="#modules">Modules</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Pystar documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="libraries.html"
+                        title="next chapter">Libraries and extension modules</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/core_language.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="libraries.html" title="Libraries and extension modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Pystar documentation"
+             >previous</a> |</li>
+        <li><a href="index.html">pystar docs v0.0.7 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2010, Phil Austin &lt;paustin@eos.ubc.ca&gt;.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.4.
+    </div>
+  </body>
+</html>
