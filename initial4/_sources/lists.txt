@@ -1,5 +1,0 @@
-Lists II
-========
-
-.. automodule:: examples.indexing
-
