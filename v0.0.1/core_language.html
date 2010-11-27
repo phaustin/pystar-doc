@@ -22,7 +22,9 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pystar docs v0.0.1 documentation" href="index.html" /> 
+    <link rel="top" title="pystar docs v0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Libraries and extension modules" href="libraries.html" />
+    <link rel="prev" title="Pystar documentation" href="index.html" /> 
   </head>
   <body>
     <div class="related">
@@ -34,6 +36,12 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="libraries.html" title="Libraries and extension modules"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Pystar documentation"
+             accesskey="P">previous</a> |</li>
         <li><a href="index.html">pystar docs v0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -49,8 +57,57 @@
 <h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tuples">
 <h3>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li>Here is the doctest for <a class="reference external" href="https://github.com/phaustin/pystar/blob/master/examples/tuples_demo.py">tuples_demo.py</a></li>
+<ul>
+<li><p class="first">Here is the doctest for <a class="reference external" href="https://github.com/phaustin/pystar/blob/master/examples/tuples_demo.py">tuples_demo.py</a></p>
+<span class="target" id="module-examples.tuples_demo"></span><p>Here is a python tuple</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>indexing starts at zero
+and covers the open interval [first,last)</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:]</span>
+<span class="go">(1, 2, 3, 4)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:]</span>
+<span class="go">(1, 2, 3, 4)</span>
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>index ranges are called &#8220;slices&#8221;</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="go">(1, 2)</span>
+</pre></div>
+</div>
+<p>you can index relative to beginning or end</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
+<span class="go">(3, 4)</span>
+</pre></div>
+</div>
+<p>and slices are objects</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">endslice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="n">endslice</span><span class="p">]</span>
+<span class="go">(3, 4)</span>
+</pre></div>
+</div>
+<p>tuples are immutable</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">9</span>
+<span class="gt">Traceback (most recent call last):</span>
+  File <span class="nb">&quot;&lt;ipython console&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n-Identifier">&lt;module&gt;</span>
+<span class="nc">TypeError</span>: <span class="n-Identifier">&#39;tuple&#39; object does not support item assignment</span>
+</pre></div>
+</div>
+<p>tuples can be used as dictionary keys</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="o">=</span><span class="p">{}</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span><span class="o">=</span><span class="s">&#39;first entry&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span>
+<span class="go">{(0, 1, 2): &#39;first entry&#39;}</span>
+</pre></div>
+</div>
+</li>
 </ul>
 </div>
 <div class="section" id="lists">
@@ -152,6 +209,12 @@
 </li>
 </ul>
 
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">Pystar documentation</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="libraries.html"
+                        title="next chapter">Libraries and extension modules</a></p>
   <h3>This Page</h3>
   <ul class="this-page-menu">
     <li><a href="_sources/core_language.txt"
@@ -183,6 +246,12 @@
         <li class="right" >
           <a href="py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
+        <li class="right" >
+          <a href="libraries.html" title="Libraries and extension modules"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="Pystar documentation"
+             >previous</a> |</li>
         <li><a href="index.html">pystar docs v0.0.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
