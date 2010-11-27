@@ -9,6 +9,9 @@ repository for gh-pages
   `Fernando Perez  <http://www.mail-archive.com/numpy-discussion@scipy.org/msg28272.html>`_
   for the `datarray-doc <https://github.com/fperez/datarray-doc/blob/master/readme.rst>`_
 
++ source code (i.e. the rst files) for the project are maintained at
+  `pystar <https://github.com/phaustin/pystar/tree/master/doc>`_
+
 + to modify these pages:
 
   - git clone git@github.com:phaustin/pystar.git
