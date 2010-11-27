@@ -2,6 +2,15 @@
 Pystar documentation
 ====================
 
+Contents:
+
+.. toctree::
+   :maxdepth: 2
+
+   core_language
+   libraries
+
+
 + Source code is kept at github:
 
   - http://github.com/phaustin/pystar
@@ -16,13 +25,6 @@ Pystar documentation
 
 + See the README.rst file at http://github.com/phaustin/pystar
 
-Contents:
-
-.. toctree::
-   :maxdepth: 2
-
-   core_language
-   libraries
    
 
 
