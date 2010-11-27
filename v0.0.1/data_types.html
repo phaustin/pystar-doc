@@ -49,57 +49,8 @@
 <h2>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="tuples">
 <h3>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
-<ul>
-<li><p class="first">Here is the doctest for <a class="reference external" href="https://github.com/phaustin/pystar/blob/master/examples/tuples_demo.py">tuples_demo.py</a></p>
-<span class="target" id="module-examples.tuples_demo"></span><p>Here is a python tuple</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>indexing starts at zero
-and covers the open interval [first,last)</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:]</span>
-<span class="go">(1, 2, 3, 4)</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[:]</span>
-<span class="go">(1, 2, 3, 4)</span>
-</pre></div>
-</div>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-<span class="go">4</span>
-</pre></div>
-</div>
-<p>index ranges are called &#8220;slices&#8221;</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-<span class="go">(1, 2)</span>
-</pre></div>
-</div>
-<p>you can index relative to beginning or end</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">:]</span>
-<span class="go">(3, 4)</span>
-</pre></div>
-</div>
-<p>and slices are objects</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">endslice</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="bp">None</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="n">endslice</span><span class="p">]</span>
-<span class="go">(3, 4)</span>
-</pre></div>
-</div>
-<p>tuples are immutable</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">9</span>
-<span class="gt">Traceback (most recent call last):</span>
-  File <span class="nb">&quot;&lt;ipython console&gt;&quot;</span>, line <span class="m">1</span>, in <span class="n-Identifier">&lt;module&gt;</span>
-<span class="nc">TypeError</span>: <span class="n-Identifier">&#39;tuple&#39; object does not support item assignment</span>
-</pre></div>
-</div>
-<p>tuples can be used as dictionary keys</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="o">=</span><span class="p">{}</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span><span class="p">[(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)]</span><span class="o">=</span><span class="s">&#39;first entry&#39;</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">the_dict</span>
-<span class="go">{(0, 1, 2): &#39;first entry&#39;}</span>
-</pre></div>
-</div>
-</li>
+<ul class="simple">
+<li>Here is the doctest for <a class="reference external" href="https://github.com/phaustin/pystar/blob/master/examples/tuples_demo.py">tuples_demo.py</a></li>
 </ul>
 </div>
 <div class="section" id="lists">
