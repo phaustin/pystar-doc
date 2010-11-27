@@ -25,6 +25,7 @@ repository for gh-pages
 
   - if pages look ok, push pystar-doc back to github
 
++ view the web pages at http://phaustin.github.com/pystar-doc
 
 
 
