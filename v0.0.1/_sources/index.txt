@@ -15,6 +15,10 @@ Contents:
 
   - http://github.com/phaustin/pystar
 
++ All code examples can be tested using::
+
+    nosetests -v --with-doctest --doctest-tests examples tests
+
 + html files are built automatically using the 
   using the   gh-pages.py script developed by 
   `Fernando Perez  <http://www.mail-archive.com/numpy-discussion@scipy.org/msg28272.html>`_
